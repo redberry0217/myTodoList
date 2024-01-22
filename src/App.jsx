@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
-import Layout from 'Layout'
-import TodoCard from './TodoCard'
-import DoneCard from './DoneCard'
+import React, { useState } from 'react';
+import Layout from 'Layout';
+import TodoCard from './TodoCard';
+import DoneCard from './DoneCard';
+import Inputform from './InputForm';
 
 function App() {
   const [title, setTitle] = useState("")
@@ -62,25 +63,12 @@ function App() {
   return (
     <section className="section">
     <Layout>
-      <div className="writeBox">
-        <h3>제목</h3>
-        <input
-          className="writeInput"
-          type="text"
-          value={title}
-          onChange={titleChangeHandler}
-          maxLength="10"
-        />
-        <h3>내용</h3>
-        <input
-          className="writeInput"
-          type="text"
-          value={memo}
-          onChange={memoChangeHandler}
-          maxLength="19"
-        />
-        <button onClick={writeBtnHandler}>추가하기</button>
-      </div>
+      <Inputform title={title}
+                 memo={memo}
+                 titleChangeHandler={titleChangeHandler}
+                 memoChangeHandler={memoChangeHandler}
+                 writeBtnHandler={writeBtnHandler}
+      />
       <div className="nowWorking">
         <h3>💟 Now Working</h3><hr className="hrStyle" />
         {todo.length === 0 

@@ -9,8 +9,10 @@ function DoneCard({ done, DoneRemoveBtnHandler, undoneBtnHandler }) {
                         <span className="showTitle">{item.title}</span>
                         <span className="showMemo">{item.memo}</span>
                         <div className="btns">
-                            <button onClick={() => DoneRemoveBtnHandler(item.id)}>삭제하기</button>
-                            <button onClick={() => undoneBtnHandler(item)}>취소하기</button>
+                            <button onClick={() => DoneRemoveBtnHandler(item.id)}
+                                    className="button-with-click-effect">삭제하기</button>
+                            <button onClick={() => undoneBtnHandler(item)}
+                                    className="button-with-click-effect">취소하기</button>
                         </div>
                     </div>
                 )

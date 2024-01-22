@@ -9,8 +9,10 @@ function TodoCard({ todo, removeBtnHandler, DoneBtnHandler }) {
                         <span className="showTitle">{item.title}</span>
                         <span className="showMemo">{item.memo}</span>
                         <div className="btns">
-                            <button onClick={() => removeBtnHandler(item.id)}>삭제하기</button>
-                            <button onClick={() => DoneBtnHandler(item)}>완료하기</button>
+                            <button onClick={() => removeBtnHandler(item.id)}
+                                    className="button-with-click-effect">삭제하기</button>
+                            <button onClick={() => DoneBtnHandler(item)}
+                                    className="button-with-click-effect">완료하기</button>
                         </div>
                     </div>
                 )

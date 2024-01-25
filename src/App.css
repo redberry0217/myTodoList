@@ -75,6 +75,7 @@ button {
   border-radius: 5px;
   margin: 5px;
   font-family: "font_bold";
+  cursor: pointer;
 }
 
 .button-with-click-effect {
